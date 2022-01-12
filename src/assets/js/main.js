@@ -16,6 +16,10 @@ const nav = document.querySelector('#navbar');
 const slideBgItemLeft = document.querySelectorAll('.j-slide_bg_item_l');
 const slideBgItemRight = document.querySelectorAll('.j-slide_bg_item_r');
 const testimonialWrapper = document.querySelector('#j-testimonial_wrapper');
+const testimonialNextBtn = document.querySelector('#j-nextBtn');
+const testimonialPrevBtn = document.querySelector('#j-prevBtn');
+const itemsAmount = testimonialWrapper.querySelectorAll('.j-testimonial_item').length;
+console.log(itemsAmount)
 
 
 // background animation when the website loads
@@ -72,25 +76,67 @@ Automatically Sets the width of testimonial section
 https://www.w3schools.com/howto/howto_js_media_queries.asp
  */
 
-function testimonialSetup(x) {
-    const itemsAmount = testimonialWrapper.querySelectorAll('.j-testimonial_item').length;
-            testimonialWrapper.style.width = `width: ${itemsAmount}00%`;
-    if (x.matches) { // If media query matches
+
+let i = 0; // page counter
+
+function testimonialSetup() {
+
+    if (md.matches) { // If media query matches
+        
         testimonialWrapper.style.width = `${itemsAmount}00%`;
+
+        /**
+        Resets left styling and page counter
+         */
         testimonialWrapper.style.left = '0';
+        i = 0;
+
     } else {
         testimonialWrapper.style.width = `${(itemsAmount / 3) * 100}%`;
+
+        /**
+        Resets left styling and page counter
+         */
         testimonialWrapper.style.left = '0';
+        i = 0;
     }
 }
 
-const x = window.matchMedia("(max-width: 960px)")
-testimonialSetup(x) // Call listener function at run time
-x.addListener(testimonialSetup) // Attach listener function on state changes
+const md = window.matchMedia("(max-width: 960px)")
+testimonialSetup(md) // Call listener function at run time
+md.addListener(testimonialSetup) // Attach listener function on state changes
 
 
 
+testimonialNextBtn.addEventListener('click', e => { 
+    e.preventDefault();
+    console.log(document.body.clientWidth)
 
+    /**
+    - Checks if client width is over/under 960px
+    - Sets a page limit
+    - Mobile & Desktop have a different page limit as more items fit on desktop (less pages) than mobile
+     */
+    if(document.body.clientWidth > 960) {
+        if((i + 1) > (itemsAmount / 3)) return;
+        i++;
+
+    } else {
+        if((i + 2) > itemsAmount) return;
+        i++;
+    }
+
+    testimonialWrapper.style.left = `-${i}00%`;
+        console.log(i + "00")
+});
+
+testimonialPrevBtn.addEventListener('click', e => { 
+    e.preventDefault();
+    if(i < 1) return;
+    i--;
+    testimonialWrapper.style.left = `-${i}00%`;
+    console.log(i + "00")
+});
 
 
 
