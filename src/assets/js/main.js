@@ -15,7 +15,7 @@ const mobileBtn = document.querySelector('#mobile-btn');
 const nav = document.querySelector('#navbar');
 const slideBgItemLeft = document.querySelectorAll('.j-slide_bg_item_l');
 const slideBgItemRight = document.querySelectorAll('.j-slide_bg_item_r');
-
+const testimonialWrapper = document.querySelector('#j-testimonial_wrapper');
 
 
 // background animation when the website loads
@@ -63,4 +63,38 @@ const update_sticky_nav_position = e => {
 
 window.addEventListener('scroll', update_sticky_nav_position);
 update_sticky_nav_position();
+
+
+
+/**
+Automatically Sets the width of testimonial section
+
+https://www.w3schools.com/howto/howto_js_media_queries.asp
+ */
+
+function testimonialSetup(x) {
+    const itemsAmount = testimonialWrapper.querySelectorAll('.j-testimonial_item').length;
+            testimonialWrapper.style.width = `width: ${itemsAmount}00%`;
+    if (x.matches) { // If media query matches
+        testimonialWrapper.style.width = `${itemsAmount}00%`;
+        testimonialWrapper.style.left = '0';
+    } else {
+        testimonialWrapper.style.width = `${(itemsAmount / 3) * 100}%`;
+        testimonialWrapper.style.left = '0';
+    }
+}
+
+const x = window.matchMedia("(max-width: 960px)")
+testimonialSetup(x) // Call listener function at run time
+x.addListener(testimonialSetup) // Attach listener function on state changes
+
+
+
+
+
+
+
+
+
+
 
