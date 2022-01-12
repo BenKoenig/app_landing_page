@@ -26,7 +26,6 @@ console.log(itemsAmount)
 anime({
   targets: slideBgItemRight,
   translateX: '200px',
-
   direction: 'reverse',
   easing: 'easeInCubic',
   delay: anime.stagger(1000)
@@ -35,11 +34,12 @@ anime({
 anime({
     targets: slideBgItemLeft,
     translateX: '-200px',
-
     direction: 'reverse',
     easing: 'easeInCubic',
     delay: anime.stagger(1000)
-  });
+});
+
+
 
 
 
@@ -126,16 +126,37 @@ testimonialNextBtn.addEventListener('click', e => {
         i++;
     }
 
-    testimonialWrapper.style.left = `-${i}00%`;
-        console.log(i + "00")
+    /**
+    - Moves testimonilal wrapper an X amount to the right (aka goes to next page)
+    - Animation
+     */
+    anime({
+        targets: testimonialWrapper,
+        left: `-${i}00%`,
+        easing: 'easeInOutExpo',
+        duration: 800
+    });
 });
 
 testimonialPrevBtn.addEventListener('click', e => { 
     e.preventDefault();
+
+    /**
+    Insures the left value isn't beneath 100% (if was less, not items would be displayed)
+     */
     if(i < 1) return;
     i--;
-    testimonialWrapper.style.left = `-${i}00%`;
-    console.log(i + "00")
+
+    /**
+    - Moves testimonilal wrapper an X amount to the right (aka goes to next page)
+    - Animation
+     */
+    anime({
+        targets: testimonialWrapper,
+        left: `-${i}00%`,
+        easing: 'easeInOutExpo',
+        duration: 800
+    });
 });
 
 
