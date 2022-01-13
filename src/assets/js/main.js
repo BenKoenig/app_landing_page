@@ -40,6 +40,20 @@ anime({
 });
 
 
+const scrollAnimateBg = anime({
+  targets: slideBgItemLeft,
+  translateY: '-200px',
+  direction: 'reverse',
+  easing: 'easeInCubic',
+  delay: anime.stagger(1000),
+  autoplay: false
+});
+
+scrollAnimateBg.seek(10)
+
+window.onScroll = function (e) {
+    scrollAnimateBg.seek(window.pageYoffset)
+}
 
 
 
