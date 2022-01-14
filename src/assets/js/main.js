@@ -19,21 +19,23 @@ const testimonialWrapper = document.querySelector('#j-testimonial_wrapper');
 const testimonialNextBtn = document.querySelector('#j-nextBtn');
 const testimonialPrevBtn = document.querySelector('#j-prevBtn');
 const itemsAmount = testimonialWrapper.querySelectorAll('.j-testimonial_item').length;
-console.log(itemsAmount)
+
 
 
 // background animation when the website loads
 anime({
-  targets: slideBgItemRight,
-  translateX: '200px',
-  direction: 'reverse',
-  easing: 'easeInCubic',
-  delay: anime.stagger(1000)
+  	targets: slideBgItemRight,
+  	translateX: '200px',
+	translateY: '200px',
+  	direction: 'reverse',
+  	easing: 'easeInCubic',
+  	delay: anime.stagger(1000)
 });
 
 anime({
     targets: slideBgItemLeft,
     translateX: '-200px',
+	translateY: '-200px',
     direction: 'reverse',
     easing: 'easeInCubic',
     delay: anime.stagger(1000)
@@ -66,7 +68,7 @@ mobileBtn.addEventListener('click', e => {
 });
 
 
-// sticky navigation 
+// sticky navigation
 let lastY = window.scrollY;
 const update_sticky_nav_position = e => {
 
@@ -74,7 +76,7 @@ const update_sticky_nav_position = e => {
         nav.classList.add('-translate-y-[100px]');
     } else {
         nav.classList.remove('-translate-y-[100px]');
-        
+
     }
     lastY = window.scrollY;
 }
@@ -96,7 +98,7 @@ let i = 0; // page counter
 function testimonialSetup() {
 
     if (md.matches) { // If media query matches
-        
+
         testimonialWrapper.style.width = `${itemsAmount}00%`;
 
         /**
@@ -122,9 +124,8 @@ md.addListener(testimonialSetup) // Attach listener function on state changes
 
 
 
-testimonialNextBtn.addEventListener('click', e => { 
+testimonialNextBtn.addEventListener('click', e => {
     e.preventDefault();
-    console.log(document.body.clientWidth)
 
     /**
     - Checks if client width is over/under 960px
@@ -132,8 +133,8 @@ testimonialNextBtn.addEventListener('click', e => {
     - Mobile & Desktop have a different page limit as more items fit on desktop (less pages) than mobile
      */
     if(document.body.clientWidth > 960) {
-        if((i + 1) > (itemsAmount / 3)) return;
-        i++;
+        if((i+2) > (itemsAmount / 3)) return;
+		i++;
 
     } else {
         if((i + 2) > itemsAmount) return;
@@ -152,14 +153,16 @@ testimonialNextBtn.addEventListener('click', e => {
     });
 });
 
-testimonialPrevBtn.addEventListener('click', e => { 
+
+
+testimonialPrevBtn.addEventListener('click', e => {
     e.preventDefault();
 
     /**
     Insures the left value isn't beneath 100% (if was less, not items would be displayed)
      */
     if(i < 1) return;
-    i--;
+	i--;
 
     /**
     - Moves testimonilal wrapper an X amount to the right (aka goes to next page)
