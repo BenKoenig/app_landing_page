@@ -1,0 +1,56 @@
+<div class="bg-beigewhite  py-20 lg:py-26" id="preview">
+	<div class="max-w-7xl mx-auto px-4">
+		<h2 class="font-bold tracking-wide text-center text-4xl z-10 relative pb-1">Preview</h2>
+		<p class="pb-8 max-w-xl text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus id erat hendrerit sit amet lectus id erat hendrerit consectetur.</p>
+
+		<div class="relative overflow-hidden w-auto w-fit mx-auto">
+
+			<!-- Button that opens overlay -->
+			<a href="#openOverlay" class="w-full h-full absolute z-20" id="j-preview"></a>
+
+			<!-- Video Thumbnail goes here -->
+			<img src="/assets/img/preview.jpg" class="rounded-tl-3xl rounded-br-3xl" alt="" />
+
+			<!-- Visual button just for usability purpose -->
+			<div class="absolute w-20 top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
+				<svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.06 108.06"><path data-name="Pfad 292" d="M54.031 0a54.031 54.031 0 1 0 54.031 54.031A54.031 54.031 0 0 0 54.031 0Zm20.358 59.222L49.11 75.933a6.773 6.773 0 0 1-10.517-5.654v-32.5a6.773 6.773 0 0 1 10.517-5.65l25.3 16.711a6.233 6.233 0 0 1-.019 10.382Z" fill="#ffa582"></path></svg>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="fixed w-full h-full z-50 top-0 left-0 right-0 bottom-0 flex items-center hidden" id="j-overlay">
+
+	<!-- Background blur effect -->
+	<div class="w-full h-full absolute bg-black/70 backdrop-blur-md"></div>
+
+	<!-- Background abstract background on desktop view -->
+	<div class="absolute top-0 left-0 w-2/3 z-0 max-w-4xl hidden lg:block">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 431.5"> <defs> <linearGradient id="a" x1=".938" y1="-.142" x2=".431" y2=".602" gradientUnits="objectBoundingBox"> <stop offset="0" stop-color="#ffa582"></stop> <stop offset="1" stop-color="#6683a3"></stop> </linearGradient> </defs> <path data-name="Pfad 98" d="M1161.53 0v431.5c40.357-5.447 70.652-42.57 70.668-86.595 0-48.218 36.12-87.29 80.655-87.256h363.717c29.421 0 56.5-17.351 70.653-45.267l35.548-70.057c14.158-27.911 41.237-45.256 70.651-45.255H2031.2c33.043 0 62.741-21.814 74.946-55.048L2121.53 0Z" transform="translate(-1161.53)" fill="url(#a)"></path> </svg>
+	</div>
+	<div class="absolute bottom-0 right-0 w-2/3  z-0 max-w-4xl hidden lg:block">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1166.88 591.03"> <defs> <linearGradient id="a" x1=".062" y1="-.142" x2=".569" y2=".602" gradientUnits="objectBoundingBox"> <stop offset="0" stop-color="#ffa582"></stop> <stop offset="1" stop-color="#6683a3"></stop> </linearGradient> </defs> <path data-name="Pfad 97" d="M1821.391 608v591.028H654.52l58.846-52.771c18.2-16.3 42.871-25.458 68.594-25.454h63.125c24.663 0 48.414-8.433 66.4-23.583L1045.2 984.669a101.605 101.605 0 0 1 49.521-22.244l511.055-81.018c33.384-5.3 61.268-25.827 73.558-54.161l71.806-165.674c11.856-27.332 38.267-47.471 70.256-53.571Z" transform="translate(-654.52 -608)" fill="url(#a)"></path> </svg>
+	</div>
+
+
+	<!-- The video overlay closes when user clicks on the blank background-->
+	<a href="#closeOverlay" id="j-overlayBlank" class="w-full h-full absolute cursor-default"></a>
+
+	<!-- Video embed -->
+	<div class="px-3 w-full max-w-7xl mx-auto z-40 relative">
+		<div class="flex justify-end">
+			<a href="#closeOverlay" id="j-closeOverlay" class="flex items-center gap-x-1 text-white mb-2 font-lg w-fit hover:text-[#FFA582] transition-colors">
+				Close
+				<div class="w-10 z-50">
+					<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="2 2 20 20"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm3.707 12.293a1 1 0 1 1-1.414 1.414L12 13.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L10.586 12 8.293 9.707a1 1 0 0 1 1.414-1.414L12 10.586l2.293-2.293a1 1 0 0 1 1.414 1.414L13.414 12Z"></path></svg>
+				</div>
+			</a>
+		</div>
+
+		<!-- Insert your video embed here -->
+		<div id="j-overlayVideo">
+			<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/-pTGc7cIBIA' frameborder='0' allowfullscreen></iframe></div>
+		</div>
+	</div>
+</div>
