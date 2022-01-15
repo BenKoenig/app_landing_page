@@ -38,7 +38,7 @@ function testimonialSetup() {
 }
 
 testimonialSetup(md) // Call listener function at run time
-md.addListener(testimonialSetup) // Attach listener function on state changes
+md.addEventListener('change', testimonialSetup); // Attach listener function on state changes
 
 testimonialNextBtn.addEventListener('click', e => {
 	e.preventDefault();
@@ -48,12 +48,12 @@ testimonialNextBtn.addEventListener('click', e => {
     - Sets a page limit
     - Mobile & Desktop have a different page limit as more items fit on desktop (less pages) than mobile
 	 */
-	if(document.body.clientWidth > 960) {
-		if((i+2) > (itemsAmount / 3)) i = -1;
+	if (document.body.clientWidth > 960) {
+		if ((i + 2) > (itemsAmount / 3)) i = -1;
 		i++;
 
 	} else {
-		if((i + 2) > itemsAmount) i = -1;
+		if ((i + 2) > itemsAmount) i = -1;
 
 		i++;
 	}
@@ -77,7 +77,7 @@ testimonialPrevBtn.addEventListener('click', e => {
 	/**
     Insures the left value isn't beneath 100% (if was less, not items would be displayed)
 	 */
-	if(document.body.clientWidth > 960) {
+	if (document.body.clientWidth > 960) {
 		if (i < 1) i = (itemsAmount / 3);
 	} else {
 		if (i < 1) i = itemsAmount - 1;

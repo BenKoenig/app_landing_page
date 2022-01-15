@@ -3,6 +3,7 @@ import "./components/navbar";
 import "./components/hero";
 import "./components/testimonials";
 import "./components/preview";
+import "./components/stats";
 
 // NO JS Fallbacks for css
 document.body.classList.add("js")
