@@ -1,8 +1,8 @@
 {
-	"name": "static-starter",
-	"description": "Static HTML/CSS/JS Template Build System",
+	"name": "Alva-App",
+	"description": "Landingpage template for an app",
 	"main": "gulpfile.js",
-	"author": "Roy Barber",
+	"author": "Benjamin König",
 	"engines": {
 		"node": "> 14.15.5"
 	},

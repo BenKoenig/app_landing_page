@@ -13,6 +13,6 @@ appears_cb(featuresWrapper, () => {
 		opacity: 0,
 		direction: 'reverse',
 		easing: 'easeInCubic',
-		delay: anime.stagger(100, {from: 'last'})
+		delay: [anime.stagger(300, {from: 'last'})]
 	});
 })

@@ -4,6 +4,7 @@ import "./components/testimonials";
 import "./components/preview";
 import "./components/stats";
 import "./components/features";
+import "./components/pricing";
 
 // NO JS Fallbacks for css
 document.body.classList.add("js")

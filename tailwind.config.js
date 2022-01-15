@@ -22,7 +22,11 @@ module.exports = {
 			},
 			colors: {
 				'oceanblue': '#436489',
-				'beigewhite': '#FFF9F7'
+				'beigewhite': '#FFF9F7',
+				'beige': '#FCF4F1',
+				'darkblue': '#111723',
+				'brightorange': '#FFA582',
+				'darkerorange': '#EF8F6A',
 			}
 		}
 	},
