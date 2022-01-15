@@ -4,6 +4,7 @@ const testimonialWrapper = document.querySelector('#j-testimonial_wrapper');
 const testimonialNextBtn = document.querySelector('#j-nextBtn');
 const testimonialPrevBtn = document.querySelector('#j-prevBtn');
 const itemsAmount = testimonialWrapper.querySelectorAll('.j-testimonial_item').length;
+const md = window.matchMedia("(max-width: 960px)")
 
 
 /**
@@ -11,8 +12,6 @@ Automatically Sets the width of testimonial section
 
 https://www.w3schools.com/howto/howto_js_media_queries.asp
  */
-
-
 let i = 0; // page counter
 
 function testimonialSetup() {
@@ -38,7 +37,6 @@ function testimonialSetup() {
 	}
 }
 
-const md = window.matchMedia("(max-width: 960px)")
 testimonialSetup(md) // Call listener function at run time
 md.addListener(testimonialSetup) // Attach listener function on state changes
 
@@ -51,16 +49,17 @@ testimonialNextBtn.addEventListener('click', e => {
     - Mobile & Desktop have a different page limit as more items fit on desktop (less pages) than mobile
 	 */
 	if(document.body.clientWidth > 960) {
-		if((i+2) > (itemsAmount / 3)) return;
+		if((i+2) > (itemsAmount / 3)) i = -1;
 		i++;
 
 	} else {
-		if((i + 2) > itemsAmount) return;
+		if((i + 2) > itemsAmount) i = -1;
+
 		i++;
 	}
 
 	/**
-    - Moves testimonilal wrapper an X amount to the right (aka goes to next page)
+    - Moves testimonial wrapper an X amount to the right (aka goes to next page)
     - Animation
 	 */
 	anime({
@@ -72,14 +71,18 @@ testimonialNextBtn.addEventListener('click', e => {
 });
 
 
-
 testimonialPrevBtn.addEventListener('click', e => {
 	e.preventDefault();
 
 	/**
     Insures the left value isn't beneath 100% (if was less, not items would be displayed)
 	 */
-	if(i < 1) return;
+	if(document.body.clientWidth > 960) {
+		if (i < 1) i = (itemsAmount / 3);
+	} else {
+		if (i < 1) i = itemsAmount - 1;
+	}
+
 	i--;
 
 	/**

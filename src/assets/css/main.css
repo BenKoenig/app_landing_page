@@ -24,3 +24,44 @@
 #videoOverlay::-webkit-scrollbar {
 	display: none; /* for Chrome, Safari, and Opera */
 }
+
+
+@font-face {
+	font-family: 'Filson Pro';
+	src: url('fonts/FilsonPro-Light.woff2') format('woff2'),
+	url('fonts/FilsonPro-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Filson Pro';
+	src: url('fonts/FilsonPro-Regular.woff2') format('woff2'),
+	url('fonts/FilsonPro-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Filson Pro';
+	src: url('fonts/FilsonPro-Bold.woff2') format('woff2'),
+	url('fonts/FilsonPro-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+
+@font-face {
+	font-family: 'Bely Display';
+	src: url('../fonts/BelyDisplay.woff2') format('woff2'),
+	url('../fonts/BelyDisplay.woff') format('woff'),
+	url('../fonts/BelyDisplay.otf') format('otf'),
+	url('../fonts/BelyDisplay.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

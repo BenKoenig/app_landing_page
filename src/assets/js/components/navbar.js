@@ -1,6 +1,7 @@
 const mobileMenu = document.querySelector('#mobile-menu');
 const mobileBtn = document.querySelector('#mobile-btn');
 const nav = document.querySelector('#navbar');
+
 // hides mobile menu by default
 mobileMenu.classList.add('hidden');
 
