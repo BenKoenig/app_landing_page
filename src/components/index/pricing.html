@@ -1,35 +1,64 @@
-<div class="w-full mx-auto bg-darkblue py-20 lg:py-36  mb-10" id="pricing">
+<div class="w-full mx-auto bg-darkblue py-20 lg:py-36 mb-10" id="pricing">
 	<div class="max-w-7xl mx-auto px-4">
 		<div class="text-center max-w-xl mx-auto text-white">
 			<h1 class="text-5xl md:text-6xl font-bold mb-5">Pricing</h1>
 			<h3 class="text-xl font-medium mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit repellat dignissimos laboriosam odit accusamus porro</h3>
 		</div>
+
+		<div class="flex justify-end pb-3 lg:pb-0">
+			<div class="relative flex items-center gap-x-2 w-fit">
+				<a href="#" id="j-switchBtn" class="absolute w-full h-full z-10"></a>
+				<p class="text-white">Display yearly subscriptions</p>
+
+				<div class="relative w-16 h-8 rounded-2xl bg-white">
+					<div class="absolute w-8 h-8 bg-brightorange rounded-2xl"></div>
+				</div>
+			</div>
+		</div>
+
+
 		<div class="mx-auto md:flex" id="j-pricing">
+
+			<!--Start of left plan-->
 			<div class="w-full  md:max-w-none bg-beigewhite px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md  md:flex md:flex-col j-pricingItem">
 				<div class="w-full flex-grow">
 					<div class="flex justify-center mb-4">
 						<h2 class="text-center font-bold uppercase bg-green-100 w-fit px-2 py-1 rounded-lg text-black">Student</h2>
 					</div>
-					<h3 class="text-center font-bold text-4xl mb-5">$5/mo</h3>
+
+					<!--Monthly/Yearly Prices-->
+					<h3 class="text-center font-bold text-4xl mb-5 j-monthlyPrices">$4.99/mo</h3>
+					<h3 class="text-center font-bold text-4xl mb-5 j-yearlyPrices hidden">$44.99/yr</h3>
+
+					<!--Benefits-->
 					<ul class="text-sm text-center mb-5 flex flex-col gap-[0.5rem]">
 						<li class="leading-tight">Fast Payments</li>
 						<li class="leading-tight">Unlimited Downloads</li>
 						<li class="leading-tight">Project tables & boards</li>
 						<li class="leading-tight">Pages and wikis</li>
 						<li class="leading-tight">Organization and team management</li>
-
 					</ul>
 				</div>
+
+				<!--CTA Button-->
 				<div class="w-full flex justify-center">
 					<a href="#" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
 				</div>
 			</div>
-			<div class="w-full md:max-w-none bg-beige px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:-mx-3 md:mb-0 rounded-md md:relative md:z-50 md:flex md:flex-col j-pricingItem">
+			<!--End of left plan-->
+
+			<!--Start of center plan-->
+			<div class="w-full md:max-w-none bg-beige px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:-mx-3 md:mb-0 rounded-md md:relative md:flex md:flex-col j-pricingItem z-20">
 				<div class="w-full flex-grow">
 					<div class="flex justify-center mb-4">
 						<h2 class="text-center font-bold uppercase bg-red-100 w-fit px-2 py-1 rounded-lg text-black">Pro</h2>
 					</div>
-					<h3 class="text-center font-bold text-4xl md:text-5xl mb-5">$15/mo</h3>
+
+					<!--Monthly/Yearly Prices-->
+					<h3 class="text-center font-bold text-4xl mb-5 j-monthlyPrices">$14.99/mo</h3>
+					<h3 class="text-center font-bold text-4xl mb-5 j-yearlyPrices hidden">$159.99/yr</h3>
+
+					<!--Benefits-->
 					<ul class="text-sm text-center mb-5 flex flex-col gap-[0.5rem]">
 						<li class="leading-tight">Fast Payments</li>
 						<li class="leading-tight">Unlimited Downloads</li>
@@ -40,16 +69,26 @@
 						<li class="leading-tight">Secret scanning</li>
 					</ul>
 				</div>
+
+				<!--CTA Button-->
 				<div class="w-full flex justify-center">
 					<a href="#" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
 				</div>
 			</div>
-			<div class="w-full md:max-w-none bg-beigewhite px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md md:flex md:flex-col j-pricingItem">
+			<!--End of center plan-->
+
+			<!--Start of right plan-->
+			<div class="w-full md:max-w-none bg-beigewhite px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md md:flex md:flex-col j-pricingItem ">
 				<div class="w-full flex-grow">
 					<div class="flex justify-center mb-4">
 						<h2 class="text-center font-bold uppercase bg-blue-100 w-fit px-2 py-1 rounded-lg text-black">Starter</h2>
 					</div>
-					<h3 class="text-center font-bold text-4xl mb-5">$8/mo</h3>
+
+					<!--Monthly/Yearly Prices-->
+					<h3 class="text-center font-bold text-4xl mb-5 j-monthlyPrices">$14.99/mo</h3>
+					<h3 class="text-center font-bold text-4xl mb-5 j-yearlyPrices hidden">$89.99/yr</h3>
+
+					<!--Benefits-->
 					<ul class="text-sm text-center mb-5 flex flex-col gap-[0.5rem]">
 						<li class="leading-tight">Fast Payments</li>
 						<li class="leading-tight">Unlimited Downloads</li>
@@ -57,11 +96,13 @@
 						<li class="leading-tight">Pages and wikis</li>
 					</ul>
 				</div>
+
+				<!--CTA Button-->
 				<div class="w-full flex justify-center">
 					<a href="#" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
 				</div>
 			</div>
+			<!--End of right plan-->
 		</div>
 	</div>
-
 </div>
