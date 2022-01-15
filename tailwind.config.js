@@ -22,6 +22,7 @@ module.exports = {
 			},
 			colors: {
 				'oceanblue': '#436489',
+				'lighterblue': '#6683A3',
 				'beigewhite': '#FFF9F7',
 				'beige': '#FCF4F1',
 				'darkblue': '#111723',

@@ -29,7 +29,7 @@ switchBtn.addEventListener('click', e => {
 			targets: btn,
 			translateX: "100%",
 			easing: 'easeInCubic',
-			duration: 200,
+			duration: 150,
 		});
 		text.innerHTML = "Display monthly subscriptions";
 		document.querySelectorAll(".j-yearlyPrices").forEach(yr => yr.classList.remove("hidden"));
@@ -41,13 +41,12 @@ switchBtn.addEventListener('click', e => {
 			targets: btn,
 			translateX: "0%",
 			easing: 'easeInCubic',
-			duration: 200,
+			duration: 150,
 		});
 
 		text.innerHTML = "Display yearly subscriptions"
 		document.querySelectorAll('.j-monthlyPrices').forEach(mo => mo.classList.remove("hidden"));
 		document.querySelectorAll(".j-yearlyPrices").forEach(yr => yr.classList.add("hidden"));
-
 	}
 
 
