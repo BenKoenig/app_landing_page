@@ -10,8 +10,7 @@ module.exports = {
 				'hero_desktop': "url('/assets/img/backgrounds/hero-bg-desktop.jpg')",
 			},
 			fontFamily: {
-				bely: ["Bely Display"],
-				filson: ["Filson Pro"]
+				outfit: ["'Outfit', serif"],
 			},
 			borderRadius: {
 				'3_5xl': '2.7rem',

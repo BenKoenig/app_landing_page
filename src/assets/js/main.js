@@ -6,6 +6,7 @@ import "./components/stats";
 import "./components/features";
 import "./components/pricing";
 import "./components/faq";
+import "./components/particulars";
 
 // NO JS Fallbacks for css
 document.body.classList.add("js")
