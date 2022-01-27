@@ -1,9 +1,9 @@
 {
     "svgSprite": "/assets/img/svg-sprite/sprite.svg",
-    "company_name": "Alfa App",
-    "pageTitle": "Alfa App - Template",
-    "pageDescription": "TailwindCSS App Landingpage",
+    "company_name": "Alva App",
+    "pageTitle": "Alva App - Template",
+    "pageDescription": "Alva App Template",
 	"welcome": "Speed up your development with a complete and scalable gulpjs based build system that scaffolds the project for you. Just focus on your code.",
-	"twitter": "roybarberuk",
-	"siteName": "Alfa App"
+	"twitter": "alva",
+	"siteName": "Alva App"
 }
