@@ -13,6 +13,7 @@ const stats = {
 appears_cb(statsWrapper, () => {
 	anime({
 		targets: stats,
+		/*Change numbers here*/
 		downloads: 80000,
 		reviews: 10000,
 		articles: 1200,

@@ -16,6 +16,8 @@ appears_cb(pricingWrapper, () => {
 	});
 })
 
+
+/*Toggle Button for monthly/yearly price listing*/
 let yearlyPrices = false;
 switchBtn.addEventListener('click', e => {
 	e.preventDefault();
@@ -48,6 +50,4 @@ switchBtn.addEventListener('click', e => {
 		document.querySelectorAll('.j-monthlyPrices').forEach(mo => mo.classList.remove("hidden"));
 		document.querySelectorAll(".j-yearlyPrices").forEach(yr => yr.classList.add("hidden"));
 	}
-
-
 })
