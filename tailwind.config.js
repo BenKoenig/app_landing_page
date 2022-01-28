@@ -25,6 +25,7 @@ module.exports = {
 				'beigewhite': '#FFF9F7',
 				'beige': '#FCF4F1',
 				'darkbeige': '#FBF1ED',
+				'mediumblue': '#1d2536',
 				'darkblue': '#111723',
 				'brightorange': '#FFA582',
 				'darkerorange': '#EF8F6A',

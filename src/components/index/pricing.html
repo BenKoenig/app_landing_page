@@ -1,138 +1,152 @@
-<div class="w-full mx-auto bg-darkblue py-20 lg:py-36 mb-10" id="pricing">
-	<div class="max-w-7xl mx-auto px-4">
-		<div class="text-center max-w-xl mx-auto text-white">
-			<h1 class="text-5xl md:text-6xl font-bold mb-5">Pricing</h1>
-			<h3 class="text-xl font-medium mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit repellat dignissimos laboriosam odit accusamus porro</h3>
-		</div>
+<div class="w-full mx-auto bg-darkblue  mb-10" id="pricing">
 
-		<!--Toggle Subscription Prices (monthly/yearly)-->
-		<div class="flex justify-end pb-3 lg:pb-0">
-			<div class="relative flex items-center gap-x-2 w-fit">
-				<a href="#toggleSubscription" id="j-switchBtn" class="absolute w-full h-full z-10"></a>
-				<p class="text-white">Display yearly subscriptions</p>
+	<!-- Desktop Wave Transition (more waves) -->
+	<div class="-translate-y-[1px] hidden lg:block">
+		<svg class="text-mediumblue fill-current" viewBox="0 0 1922 77.79"> <path data-name="wave (3)" d="m0 38.044 64.067-4.756c64.067-4.756 192.2-14.267 320.333-7.936C512.533 31.8 640.667 53.8 768.8 60.247c128.133 6.331 256.267-3.18 384.4 0 128.133 3.061 256.266 19.111 384.4 17.417 128.133-1.575 256.267-20.6 320.333-30.109L1922 38.044V0H0Z"></path> </svg>
+	</div>
 
-				<div class="relative w-16 h-8 rounded-2xl bg-white">
-					<div class="absolute w-8 h-8 bg-brightorange rounded-2xl"></div>
+	<!-- Mobile Wave Transition (less waves) -->
+	<div class="-translate-y-[1px] lg:hidden">
+		<svg viewBox="0 0 1440 284.89" class="text-mediumblue fill-current transition duration-300 ease-in-out delay-150"><path d="M1440 0v250c-127.867 22.533-255.733 45.067-421 30s-367.933-67.733-544-79c-176.067-11.267-325.533 18.867-475 49V0Z"  class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+	</div>
+
+	<div class="py-20 lg:py-26">
+		<div class="max-w-7xl mx-auto px-4">
+			<div class="text-center max-w-xl mx-auto text-white">
+				<h1 class="text-5xl md:text-6xl font-bold mb-5">Pricing</h1>
+				<h3 class="text-xl font-medium mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit repellat dignissimos laboriosam odit accusamus porro</h3>
+			</div>
+
+			<!--Toggle Subscription Prices (monthly/yearly)-->
+			<div class="flex justify-end pb-3 lg:pb-0">
+				<div class="relative flex items-center gap-x-2 w-fit">
+					<a href="#toggleSubscription" id="j-switchBtn" class="absolute w-full h-full z-10"></a>
+					<p class="text-white">Display yearly subscriptions</p>
+
+					<div class="relative w-16 h-8 rounded-2xl bg-white">
+						<div class="absolute w-8 h-8 bg-brightorange rounded-2xl"></div>
+					</div>
 				</div>
 			</div>
-		</div>
 
 
-		<div class="mx-auto md:flex" id="j-pricing">
-			<!--Start of left plan-->
-			<div class="w-full  md:max-w-none bg-beigewhite px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md  md:flex md:flex-col j-pricingItem">
-				<div class="w-full flex-grow">
-					<div class="flex justify-center mb-4">
-						<h2 class="text-center font-bold uppercase bg-green-100 w-fit px-2 py-1 rounded-lg text-black">Student</h2>
+			<div class="mx-auto md:flex" id="j-pricing">
+				<!--Start of left plan-->
+				<div class="w-full  md:max-w-none bg-beigewhite px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md  md:flex md:flex-col j-pricingItem">
+					<div class="w-full flex-grow">
+						<div class="flex justify-center mb-4">
+							<h2 class="text-center font-bold uppercase bg-green-100 w-fit px-2 py-1 rounded-lg text-black">Student</h2>
+						</div>
+
+						<!--Monthly/Yearly Prices-->
+						<h3 class="text-center font-bold text-4xl mb-5 j-monthlyPrices">$4.99/mo</h3>
+
+						<!--Yearly Prices-->
+						<div class="leading-4 j-yearlyPrices hidden items-center">
+							<p class="text-md text-center text-green-700">Save $9.98/yr</p>
+							<h3 class="text-center font-bold text-4xl mb-5">$49.99/yr</h3>
+						</div>
+
+						<!--Benefits-->
+						<ul class="text-sm text-center mb-5 flex flex-col gap-[0.5rem]">
+							<li class="leading-tight">Fast Payments</li>
+							<li class="leading-tight">Unlimited Downloads</li>
+							<li class="leading-tight">Project tables & boards</li>
+							<li class="leading-tight">Pages and wikis</li>
+							<li class="leading-tight">Organization and team management</li>
+						</ul>
 					</div>
 
-					<!--Monthly/Yearly Prices-->
-					<h3 class="text-center font-bold text-4xl mb-5 j-monthlyPrices">$4.99/mo</h3>
-
-					<!--Yearly Prices-->
-					<div class="leading-4 j-yearlyPrices hidden items-center">
-						<p class="text-md text-center text-green-700">Save $9.98/yr</p>
-						<h3 class="text-center font-bold text-4xl mb-5">$49.99/yr</h3>
+					<!--CTA Button (monthly)-->
+					<div class="w-full flex justify-center j-monthlyPrices">
+						<a href="#CtaMonthly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
 					</div>
 
-					<!--Benefits-->
-					<ul class="text-sm text-center mb-5 flex flex-col gap-[0.5rem]">
-						<li class="leading-tight">Fast Payments</li>
-						<li class="leading-tight">Unlimited Downloads</li>
-						<li class="leading-tight">Project tables & boards</li>
-						<li class="leading-tight">Pages and wikis</li>
-						<li class="leading-tight">Organization and team management</li>
-					</ul>
+					<!--CTA Button (yearly)-->
+					<div class="w-full flex justify-center j-yearlyPrices hidden">
+						<a href="#CtaYearly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
+					</div>
 				</div>
+				<!--End of left plan-->
 
-				<!--CTA Button (monthly)-->
-				<div class="w-full flex justify-center j-monthlyPrices">
-					<a href="#CtaMonthly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
-				</div>
+				<!--Start of center plan-->
+				<div class="w-full md:max-w-none bg-beige px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:-mx-3 md:mb-0 rounded-md md:relative md:flex md:flex-col j-pricingItem z-20 ">
+					<div class="w-full flex-grow">
+						<div class="flex justify-center mb-4">
+							<h2 class="text-center font-bold uppercase bg-red-100 w-fit px-2 py-1 rounded-lg text-black">Pro</h2>
+						</div>
 
-				<!--CTA Button (yearly)-->
-				<div class="w-full flex justify-center j-yearlyPrices hidden">
-					<a href="#CtaYearly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
+						<!--Monthly Prices-->
+						<h3 class="text-center font-bold text-4xl mb-5 j-monthlyPrices">$14.99/mo</h3>
+
+						<!--Yearly Prices-->
+						<div class="leading-4 j-yearlyPrices hidden items-center">
+							<p class="text-md text-center text-green-700">Save $19.89/yr</p>
+							<h3 class="text-center font-bold text-4xl mb-5">$159.99/yr</h3>
+						</div>
+
+
+						<!--Benefits-->
+						<ul class="text-sm text-center mb-5 flex flex-col gap-[0.5rem]">
+							<li class="leading-tight">Fast Payments</li>
+							<li class="leading-tight">Unlimited Downloads</li>
+							<li class="leading-tight">Project tables & boards</li>
+							<li class="leading-tight">Pages and wikis</li>
+							<li class="leading-tight">Organization and team management</li>
+							<li class="leading-tight">Required status checks</li>
+							<li class="leading-tight">Secret scanning</li>
+						</ul>
+					</div>
+
+					<!--CTA Button (yearly)-->
+					<div class="w-full flex justify-center j-monthlyPrices">
+						<a href="#CtaYearly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
+					</div>
+					<!--CTA Button (yearly)-->
+					<div class="w-full flex justify-center j-yearlyPrices hidden">
+						<a href="#CtaYearly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
+					</div>
 				</div>
+				<!--End of center plan-->
+
+				<!--Start of right plan-->
+				<div class="w-full md:max-w-none bg-beigewhite px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md md:flex md:flex-col j-pricingItem ">
+					<div class="w-full flex-grow">
+						<div class="flex justify-center mb-4">
+							<h2 class="text-center font-bold uppercase bg-blue-100 w-fit px-2 py-1 rounded-lg text-black">Starter</h2>
+						</div>
+
+						<!--Monthly Prices-->
+						<h3 class="text-center font-bold text-4xl mb-5 j-monthlyPrices">$8.99/mo</h3>
+
+						<!--Yearly Prices-->
+						<div class="leading-4 j-yearlyPrices hidden items-center">
+							<p class="text-md text-center text-green-700">Save $17.89/yr</p>
+							<h3 class="text-center font-bold text-4xl mb-5">$89.99/yr</h3>
+						</div>
+
+						<!--Benefits-->
+						<ul class="text-sm text-center mb-5 flex flex-col gap-[0.5rem]">
+							<li class="leading-tight">Fast Payments</li>
+							<li class="leading-tight">Unlimited Downloads</li>
+							<li class="leading-tight">Project tables & boards</li>
+							<li class="leading-tight">Pages and wikis</li>
+						</ul>
+					</div>
+
+					<!--CTA Button (monthly)-->
+					<div class="w-full flex justify-center j-monthlyPrices">
+						<a href="#CtaMonthly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
+					</div>
+
+					<!--CTA Button (yearly)-->
+					<div class="w-full flex justify-center j-yearlyPrices hidden">
+						<a href="#CtaYearly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
+					</div>
+				</div>
+				<!--End of right plan-->
 			</div>
-			<!--End of left plan-->
-
-			<!--Start of center plan-->
-			<div class="w-full md:max-w-none bg-beige px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:-mx-3 md:mb-0 rounded-md md:relative md:flex md:flex-col j-pricingItem z-20 ">
-				<div class="w-full flex-grow">
-					<div class="flex justify-center mb-4">
-						<h2 class="text-center font-bold uppercase bg-red-100 w-fit px-2 py-1 rounded-lg text-black">Pro</h2>
-					</div>
-
-					<!--Monthly Prices-->
-					<h3 class="text-center font-bold text-4xl mb-5 j-monthlyPrices">$14.99/mo</h3>
-
-					<!--Yearly Prices-->
-					<div class="leading-4 j-yearlyPrices hidden items-center">
-						<p class="text-md text-center text-green-700">Save $19.89/yr</p>
-						<h3 class="text-center font-bold text-4xl mb-5">$159.99/yr</h3>
-					</div>
-
-
-					<!--Benefits-->
-					<ul class="text-sm text-center mb-5 flex flex-col gap-[0.5rem]">
-						<li class="leading-tight">Fast Payments</li>
-						<li class="leading-tight">Unlimited Downloads</li>
-						<li class="leading-tight">Project tables & boards</li>
-						<li class="leading-tight">Pages and wikis</li>
-						<li class="leading-tight">Organization and team management</li>
-						<li class="leading-tight">Required status checks</li>
-						<li class="leading-tight">Secret scanning</li>
-					</ul>
-				</div>
-
-				<!--CTA Button (yearly)-->
-				<div class="w-full flex justify-center j-monthlyPrices">
-					<a href="#CtaYearly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
-				</div>
-				<!--CTA Button (yearly)-->
-				<div class="w-full flex justify-center j-yearlyPrices hidden">
-					<a href="#CtaYearly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
-				</div>
-			</div>
-			<!--End of center plan-->
-
-			<!--Start of right plan-->
-			<div class="w-full md:max-w-none bg-beigewhite px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md md:flex md:flex-col j-pricingItem ">
-				<div class="w-full flex-grow">
-					<div class="flex justify-center mb-4">
-						<h2 class="text-center font-bold uppercase bg-blue-100 w-fit px-2 py-1 rounded-lg text-black">Starter</h2>
-					</div>
-
-					<!--Monthly Prices-->
-					<h3 class="text-center font-bold text-4xl mb-5 j-monthlyPrices">$8.99/mo</h3>
-
-					<!--Yearly Prices-->
-					<div class="leading-4 j-yearlyPrices hidden items-center">
-						<p class="text-md text-center text-green-700">Save $17.89/yr</p>
-						<h3 class="text-center font-bold text-4xl mb-5">$89.99/yr</h3>
-					</div>
-
-					<!--Benefits-->
-					<ul class="text-sm text-center mb-5 flex flex-col gap-[0.5rem]">
-						<li class="leading-tight">Fast Payments</li>
-						<li class="leading-tight">Unlimited Downloads</li>
-						<li class="leading-tight">Project tables & boards</li>
-						<li class="leading-tight">Pages and wikis</li>
-					</ul>
-				</div>
-
-				<!--CTA Button (monthly)-->
-				<div class="w-full flex justify-center j-monthlyPrices">
-					<a href="#CtaMonthly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
-				</div>
-
-				<!--CTA Button (yearly)-->
-				<div class="w-full flex justify-center j-yearlyPrices hidden">
-					<a href="#CtaYearly" class="font-bold bg-brightorange hover:bg-darkerorange text-white rounded-md px-10 py-2 transition-colors">Subscribe</a>
-				</div>
-			</div>
-			<!--End of right plan-->
 		</div>
 	</div>
+
 </div>
