@@ -1,8 +1,8 @@
 {
 	"name": "Alva-App",
-	"description": "Landingpage template for an app",
+	"description": "Landing page template for an app",
 	"main": "gulpfile.js",
-	"author": "Benjamin König",
+	"author": "@benwkoenig",
 	"engines": {
 		"node": "> 14.15.5"
 	},
