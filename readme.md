@@ -1,5 +1,5 @@
-# Alva App Tailwind Template
-### Free template for your mobile app
+# App Landing Page made with Tailwind
+### Alva app is a landing page template for your mobile app
 
 ## Technologies used
 - TailwindCSS :muscle:
