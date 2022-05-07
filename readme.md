@@ -8,6 +8,8 @@
 - Webpack :bento:
 - Netlify :mandarin:
 
+### View Demo
+[Demo](https://alvatemplate.netlify.app/)
 
 1. First you are going to have to install all the packages.
 ```
@@ -37,8 +39,8 @@ I am also available for commissions!
 
 
 Credits:
-Hero background: https://www.reshot.com/free-vector-illustrations/item/smartphone-photography-G5HQE7XJVW/
-Some illustrations: https://undraw.co/
+- Hero background: https://www.reshot.com/free-vector-illustrations/item/smartphone-photography-G5HQE7XJVW/
+- Some illustrations: https://undraw.co/
 
 
 
