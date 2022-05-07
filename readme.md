@@ -1,5 +1,6 @@
 # Alva App Tailwind Template
-## Free template for an app
+
+### Free template for an app
 
 1. First you are going to have to install all the packages.
 ```
