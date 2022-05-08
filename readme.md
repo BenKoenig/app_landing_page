@@ -32,8 +32,8 @@ Netlify will automatically detect the "netlify.toml" file which I have created f
 > src/assets/css/main.css
 
 If you have any further questions, don't hesitate to contact me on Twitter or Email.
-[Twitter](https://twitter.com/benwkoenig)
-Email: be.koenig99@gmail.com
+- [Twitter](https://twitter.com/benwkoenig)
+- Email: be.koenig99@gmail.com
 
 I am also available for commissions!
 
